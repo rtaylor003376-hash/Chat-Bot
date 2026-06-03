@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import ChatBot from "./components/ChatBot.jsx";
-import "./index.css";
 createRoot(document.getElementById("app")).render(
   <StrictMode>
     <ChatBot />
