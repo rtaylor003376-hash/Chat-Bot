@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import "./ChatBot.css";
-
+const baseURL = import.meta.env.VITE_BASE_URL || "http://localhost:5001";
 function ChatBot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef(null);
 
-  // Auto-scroll to bottom when messages change
   useEffect(() => {
     scrollRef.current?.scrollTo({
       top: scrollRef.current.scrollHeight,
